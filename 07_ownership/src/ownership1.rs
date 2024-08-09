@@ -3,10 +3,13 @@ fn main() {
     let v = 42;
 
     // Try using `match` here?
-    if let Some(pos) = find_pos(data, v) {
-        println!("Found {} at {}", v, pos);
-    } else {
-        println!("{} not found", v);
+    match find_pos(data, v) {
+        Some(pos) => {
+            println!("Found {} at {}", v, pos);
+        }
+        None => {
+            println!("{} not found", v);
+        }
     }
 }
 
