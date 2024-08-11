@@ -7,7 +7,7 @@ fn main() {
 
     // Rust 下，不能同时拥有可变引用和只读引用
     // for i in 0..100 {
-    //     data.push(i);
+    //     data.push(i); // 这一步使得 data这个可变引用 “活跃”起来
     // }
 
     println!("data[0]: {:p}", &data[0]);

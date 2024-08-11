@@ -15,6 +15,18 @@ path = "src/refcell.rs"
 name = "dag_mut"
 path = "src/dag_mut.rs"
 
+[[bin]]
+name = "rc_demo"
+path = "src/rc_demo.rs"
+
+[[bin]]
+name = "my_dag"
+path = "src/my_dag.rs"
+
+[[bin]]
+name = "spawn_demo"
+path = "src/spawn_demo.rs"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
