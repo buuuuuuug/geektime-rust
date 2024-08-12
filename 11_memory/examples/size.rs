@@ -39,4 +39,6 @@ fn main() {
     show_size!(Vec<u8>);
     show_size!(HashMap<String, String>);
     show_size!(E);
+    show_size!(Result<String, ()>); //24 因为String占用部分：指向对内存的地址--8字节，一个长度位--8字节，一个容量位--8字节，Result 枚举经过优化，不占用额外的内存
+    println!("{}", std::mem::size_of::<Result<String, ()>>());
 }

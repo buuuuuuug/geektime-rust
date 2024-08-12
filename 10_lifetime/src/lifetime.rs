@@ -6,7 +6,7 @@ fn main() {
 
     println!("bigger one: {}", result);
 
-    let result = get_max(s1);
+    let result = get_max(s1.as_str());
     println!("bigger one: {}", result);
 }
 
@@ -15,7 +15,7 @@ fn get_max(s1: &str) -> &str {
 }
 
 // 这段代码无法编译通过
-fn max(s1: &str, s2: &str) -> &str {
+fn max<'a>(s1: &'a str, s2: &'a str) -> &'a str {
     if s1 > s2 {
         s1
     } else {
